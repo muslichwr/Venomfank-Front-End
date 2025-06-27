@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="series-id" content="2"> <!-- Added for reading progress tracking -->
+    <meta name="chapter-id" content="45"> <!-- Added for reading progress tracking -->
+    <title>Reading Tower of God Chapter 45 - Venomfank Readers</title>
+    <link href="/src/output.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="reader-layout bg-black">
+    <!-- Reader Navigation -->
+    <nav class="reader-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="flex justify-between items-center h-16">
+                <!-- Left Side: Series Info -->
+                <div class="flex items-center space-x-4">
+                    <a href="../series/show.html" class="text-accent-500 hover:text-accent-400 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </a>
+                    <div>
+                        <h1 class="text-lg font-semibold">Tower of God</h1>
+                        <p class="text-sm text-dark-400">Chapter 45</p>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Controls -->
+                <div class="flex items-center space-x-4">
+                    <!-- Reading Settings -->
+                    <button id="settingsBtn" class="p-2 text-dark-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Bookmark -->
+                    <button class="p-2 text-dark-400 hover:text-accent-500 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Reading Progress (Mobile Hidden) -->
+                    <div class="hidden md:flex items-center space-x-2 text-sm text-dark-400">
+                        <span>Progress:</span>
+                        <div class="w-32 bg-dark-700 rounded-full h-2">
+                            <div class="reading-progress-bar bg-accent-500 h-2 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <span class="reading-progress-text">0%</span>
+                    </div>
+
+                    <!-- Chapter Navigation -->
+                    <div class="flex items-center space-x-2">
+                        <a href="#" class="p-2 text-dark-400 hover:text-white transition-colors prev-chapter-btn">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </a>
+                        <select class="input-field text-sm py-2 chapter-select">
+                            <option value="chapter-45.html">Chapter 45</option>
+                            <option value="chapter-44.html">Chapter 44</option>
+                            <option value="chapter-43.html">Chapter 43</option>
+                        </select>
+                        <a href="#" class="p-2 text-dark-400 hover:text-white transition-colors next-chapter-btn">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Settings Panel (Hidden by default) -->
+    <div id="settingsPanel" class="hidden fixed top-16 right-4 settings-panel p-6 z-40 w-80">
+        <h3 class="text-lg font-semibold mb-4">Reading Settings</h3>
+        
+        <div class="space-y-4">
+            <!-- Reading Mode - Limited options for webtoon -->
+            <div>
+                <label class="block text-sm font-medium mb-2">Reading Mode</label>
+                <select id="readingModeSelect" class="input-field w-full">
+                    <option value="vertical" selected>Vertical Scrolling</option>
+                </select>
+                <p class="text-xs text-dark-400 mt-1">Webtoons are optimized for vertical scrolling</p>
+            </div>
+
+            <!-- Image Quality -->
+            <div>
+                <label class="block text-sm font-medium mb-2">Image Quality</label>
+                <select id="imageQualitySelect" class="input-field w-full">
+                    <option value="high">High Quality</option>
+                    <option value="medium">Medium Quality</option>
+                    <option value="low">Low Quality (Fast)</option>
+                </select>
+            </div>
+
+            <!-- Auto Scroll -->
+            <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium">Auto Scroll</label>
+                <input type="checkbox" id="autoScrollCheck" class="rounded">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium mb-2">Scroll Speed</label>
+                <input type="range" id="autoScrollSpeedSlider" min="1" max="10" step="0.5" value="2" class="slider-control w-full">
+                <div class="flex justify-between text-xs text-dark-400 mt-1">
+                    <span>Slow</span>
+                    <span>Fast</span>
+                </div>
+            </div>
+
+            <!-- Width Control - Specific for webtoon -->
+            <div>
+                <label class="block text-sm font-medium mb-2">Content Width</label>
+                <select id="contentWidthSelect" class="input-field w-full">
+                    <option value="narrow">Narrow</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="wide">Wide</option>
+                    <option value="full">Full Width</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reading Progress Bar at bottom -->
+    <div class="reading-progress-container">
+        <div class="reading-progress-bar"></div>
+    </div>
+    
+    <!-- Manga Content -->
+    <div class="py-4">
+        <!-- Webtoon Container - Always vertical mode -->
+        <div id="pagesContainer" class="webtoon-container">
+            <!-- Webtoon content is one long strip -->
+            <img src="https://picsum.photos/id/870/800/2400" alt="Part 1" class="webtoon-segment" 
+                data-high-quality-src="https://picsum.photos/id/870/800/2400" 
+                data-medium-quality-src="https://picsum.photos/id/870/600/1800" 
+                data-low-quality-src="https://picsum.photos/id/870/400/1200">
+
+            <img src="https://picsum.photos/id/871/800/2400" alt="Part 2" class="webtoon-segment"
+                data-high-quality-src="https://picsum.photos/id/871/800/2400" 
+                data-medium-quality-src="https://picsum.photos/id/871/600/1800" 
+                data-low-quality-src="https://picsum.photos/id/871/400/1200">
+
+            <img src="https://picsum.photos/id/872/800/2400" alt="Part 3" class="webtoon-segment"
+                data-high-quality-src="https://picsum.photos/id/872/800/2400" 
+                data-medium-quality-src="https://picsum.photos/id/872/600/1800" 
+                data-low-quality-src="https://picsum.photos/id/872/400/1200">
+
+            <!-- End of Chapter -->
+            <div class="text-center py-12 px-4">
+                <div class="bg-dark-800 rounded-lg p-8 border border-dark-700 max-w-2xl mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">End of Chapter 45</h3>
+                    <p class="text-dark-300 mb-6">Thank you for reading! Don't forget to bookmark this series.</p>
+                    
+                    <!-- Coin system message -->
+                    <div class="bg-dark-700 rounded-lg p-4 mb-6 flex items-start">
+                        <div class="mr-4 text-yellow-400 text-2xl">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-1">Early Access Available</h4>
+                            <p class="text-dark-300 mb-2">Want to read ahead? Chapter 46 is already available with early access.</p>
+                            <button class="btn-primary">
+                                <i class="fas fa-unlock mr-2"></i>
+                                Unlock for 50 Coins
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Chapter Navigation -->
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="btn-secondary prev-chapter-btn">
+                            <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                            Previous Chapter
+                        </a>
+                        <a href="../series/show.html" class="btn-secondary">Back to Series</a>
+                        <a href="#" class="btn-primary next-chapter-btn">
+                            Next Chapter
+                            <svg class="w-5 h-5 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auto-scroll indicator (hidden by default) -->
+    <div id="autoScrollIndicator" class="auto-scroll-indicator hidden">
+        <i class="fas fa-play"></i>
+        <span>Auto-scrolling</span>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="max-w-4xl mx-auto px-4 pb-12">
+        <div class="bg-dark-800 rounded-lg p-6 border border-dark-700">
+            <h3 class="text-xl font-semibold mb-6">Chapter Discussion</h3>
+            
+            <!-- Comment Form -->
+            <div class="mb-6">
+                <textarea class="input-field w-full h-24 mb-4" placeholder="Share your thoughts on this chapter..."></textarea>
+                <button class="btn-primary">Post Comment</button>
+            </div>
+
+            <!-- Comments -->
+            <div class="space-y-4">
+                <div class="bg-dark-700 rounded-lg p-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-accent-500 rounded-full flex items-center justify-center">
+                            <span class="text-white text-sm font-semibold">K</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="font-medium">webtoon_fan</span>
+                                <span class="text-dark-400 text-sm">3 hours ago</span>
+                            </div>
+                            <p class="text-dark-200">The art in this chapter was amazing! SIU really outdid himself with the backgrounds.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-dark-700 rounded-lg p-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-success rounded-full flex items-center justify-center">
+                            <span class="text-white text-sm font-semibold">T</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="font-medium">tog_lover</span>
+                                <span class="text-dark-400 text-sm">5 hours ago</span>
+                            </div>
+                            <p class="text-dark-200">Bam's character development is getting really interesting. Can't wait to see what happens next!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/utils.js"></script>
+    <script src="../js/readers.js"></script>
+    <script src="../js/webtoon.js"></script>
+
+</body>
+</html>

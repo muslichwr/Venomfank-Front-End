@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="series-id" content="2"> <!-- Added for reading progress tracking -->
+    <meta name="chapter-id" content="16-1"> <!-- Added for reading progress tracking -->
+    <title>Reading Overlord Volume 16, Chapter 1 - Venomfank Readers</title>
+    <link href="/src/output.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="reader-layout">
+    <!-- Reader Navigation -->
+    <nav class="reader-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="flex justify-between items-center h-16">
+                <!-- Left Side: Series Info -->
+                <div class="flex items-center space-x-4">
+                    <a href="../series/show.html" class="text-accent-500 hover:text-accent-400 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </a>
+                    <div>
+                        <h1 class="text-lg font-semibold">Overlord</h1>
+                        <p class="text-sm text-dark-400">Volume 16, Chapter 1</p>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Controls -->
+                <div class="flex items-center space-x-4">
+                    <!-- Reading Settings -->
+                    <button id="settingsBtn" class="p-2 text-dark-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Bookmark -->
+                    <button class="p-2 text-dark-400 hover:text-accent-500 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Reading Progress (Mobile Hidden) -->
+                    <div class="hidden md:flex items-center space-x-2 text-sm text-dark-400">
+                        <span>Progress:</span>
+                        <div class="w-32 bg-dark-700 rounded-full h-2">
+                            <div class="reading-progress-bar bg-accent-500 h-2 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <span class="reading-progress-text">0%</span>
+                    </div>
+
+                    <!-- Chapter Navigation -->
+                    <div class="flex items-center space-x-2">
+                        <a href="#" class="p-2 text-dark-400 hover:text-white transition-colors prev-chapter-btn">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </a>
+                        <select class="input-field text-sm py-2 chapter-select">
+                            <option value="volume16-chapter1.html">Volume 16, Chapter 1</option>
+                            <option value="volume15-chapter8.html">Volume 15, Chapter 8</option>
+                            <option value="volume15-chapter7.html">Volume 15, Chapter 7</option>
+                        </select>
+                        <a href="#" class="p-2 text-dark-400 hover:text-white transition-colors next-chapter-btn">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Settings Panel -->
+    <div id="settingsPanel" class="hidden fixed top-16 right-4 settings-panel p-6 z-40 w-80">
+        <h3 class="text-lg font-semibold mb-4">Reading Settings</h3>
+        
+        <div class="space-y-4">
+            <!-- Font Size -->
+            <div>
+                <label class="block text-sm font-medium mb-2">Font Size</label>
+                <input type="range" id="fontSizeSlider" min="14" max="24" value="18" class="slider-control w-full">
+                <div class="flex justify-between text-xs text-dark-400 mt-1">
+                    <span>Small</span>
+                    <span>Large</span>
+                </div>
+            </div>
+
+            <!-- Line Height -->
+            <div>
+                <label class="block text-sm font-medium mb-2">Line Height</label>
+                <input type="range" id="lineHeightSlider" min="1.4" max="2.0" step="0.1" value="1.7" class="slider-control w-full">
+                <div class="flex justify-between text-xs text-dark-400 mt-1">
+                    <span>Tight</span>
+                    <span>Loose</span>
+                </div>
+            </div>
+
+            <!-- Font Family -->
+            <div>
+                <label class="block text-sm font-medium mb-2">Font Family</label>
+                <select id="fontFamilySelect" class="input-field w-full">
+                    <option value="Poppins">Poppins (Default)</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Arial">Arial</option>
+                </select>
+            </div>
+            
+            <!-- Text Alignment -->
+            <div>
+                <label class="block text-sm font-medium mb-2">Text Alignment</label>
+                <select id="textAlignSelect" class="input-field w-full">
+                    <option value="left">Left</option>
+                    <option value="justify">Justify</option>
+                    <option value="center">Center</option>
+                </select>
+            </div>
+
+            <!-- Reading Width -->
+            <div>
+                <label class="block text-sm font-medium mb-2">Reading Width</label>
+                <select id="readingWidthSelect" class="input-field w-full">
+                    <option value="narrow">Narrow</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="wide">Wide</option>
+                </select>
+            </div>
+
+            <!-- Auto Scroll -->
+            <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium">Auto Scroll</label>
+                <input type="checkbox" id="autoScrollCheck" class="rounded">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium mb-2">Scroll Speed</label>
+                <input type="range" id="autoScrollSpeedSlider" min="1" max="10" step="0.5" value="2" class="slider-control w-full">
+                <div class="flex justify-between text-xs text-dark-400 mt-1">
+                    <span>Slow</span>
+                    <span>Fast</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reading Progress Bar at bottom -->
+    <div class="reading-progress-container">
+        <div class="reading-progress-bar"></div>
+    </div>
+
+    <!-- Chapter Content -->
+    <div class="max-w-4xl mx-auto py-8 px-4">
+        <!-- Chapter Header -->
+        <div class="chapter-title">
+            <h1>Volume 16: The Half Elf God-kin</h1>
+            <h2>Chapter 1: The Beginning of the End</h2>
+            <div class="meta">Published 3 days ago • 45 min read</div>
+        </div>
+
+        <!-- Novel Content -->
+        <div class="novel-container">
+            <div id="novelContent" class="novel-content">
+                <p>
+                    The Great Tomb of Nazarick stood silently in the darkness, its imposing presence casting long shadows across the desolate landscape. Within its hallowed halls, the Supreme Being known as Ainz Ooal Gown contemplated the events that had led to this moment.
+                </p>
+
+                <p>
+                    It had been months since the establishment of the Sorcerer Kingdom, and the undead overlord had grown accustomed to the responsibilities that came with ruling a nation. Yet, despite all his power and the loyalty of his guardians, there were still mysteries that eluded even his vast intelligence.
+                </p>
+
+                <p>
+                    "Albedo," Ainz called out, his voice echoing through the throne room. The succubus guardian appeared instantly, her wings folding gracefully as she bowed deeply before her master.
+                </p>
+
+                <p>
+                    "Yes, Ainz-sama?" she replied, her golden eyes gleaming with devoted attention.
+                </p>
+
+                <p>
+                    "Tell me, what news do we have from the northern territories? I sense disturbances in the magical currents that flow through our domain." The skeletal figure leaned forward slightly, his red orbs glowing with interest.
+                </p>
+
+                <p>
+                    Albedo straightened, her expression becoming serious. "My lord, our scouts have reported unusual magical phenomena in the region. It appears that an ancient seal has been weakened, possibly broken. The implications could be... significant."
+                </p>
+
+                <p>
+                    This revelation intrigued Ainz greatly. In his previous life as a salaryman, he had always been drawn to mysteries and puzzles. Now, as an undead overlord with immense magical power, such enigmas presented both opportunity and potential threat.
+                </p>
+
+                <p>
+                    "Gather the Floor Guardians," he commanded, his voice carrying the weight of absolute authority. "We shall investigate this matter personally. If there are forces at work that could threaten Nazarick, we must act swiftly and decisively."
+                </p>
+
+                <p>
+                    As Albedo departed to carry out his orders, Ainz remained seated on his throne, deep in thought. The world of the New World continued to surprise him with its complexities and hidden depths. Each day brought new challenges that required careful consideration and strategic planning.
+                </p>
+
+                <p>
+                    He remembered his guildmates from YGGDRASIL, wondering what they would make of his current situation. Would they approve of the path he had chosen? Would they understand the necessity of the actions he had taken to protect what remained of their shared creation?
+                </p>
+
+                <p>
+                    The weight of leadership pressed down upon him, heavier than any armor he had ever worn. Yet, he would not falter. For the sake of Nazarick, for the memory of Ainz Ooal Gown, he would see this through to whatever end awaited them all.
+                </p>
+
+                <h3>A New Discovery</h3>
+
+                <p>
+                    Hours later, the Floor Guardians assembled in the Throne Room. Shalltear, Cocytus, Aura, Mare, Demiurge, and Albedo stood in a semicircle before their lord, each with their unique powers and intellect ready to be deployed at his command.
+                </p>
+
+                <p>
+                    "My loyal Guardians," Ainz began, his voice resonating through the vast chamber. "I have called you here because we face a new situation that requires our attention. Albedo, please share what our scouts have discovered."
+                </p>
+
+                <p>
+                    The Guardian Overseer stepped forward, her black wings folded neatly behind her. "Yes, Ainz-sama. Our intelligence reports indicate that approximately three days ago, an unusual magical disturbance occurred in the mountain range north of the Azerlisia Mountains. The disturbance appears to have originated from an ancient structure that was previously undetected by our surveillance."
+                </p>
+
+                <p>
+                    She gestured, and a magical projection appeared in the air, displaying a stone structure partially embedded in the side of a mountain. Runes of unknown origin covered its surface, glowing with a faint blue light.
+                </p>
+
+                <p>
+                    "This structure," she continued, "predates any known civilization in this world according to our records. The runes do not match any known language, not even those from YGGDRASIL."
+                </p>
+
+                <p>
+                    Demiurge, ever analytical, adjusted his glasses. "Fascinating. A civilization that predates even the game knowledge? This could provide valuable insights into this world's true nature."
+                </p>
+
+                <p>
+                    Cocytus's mandibles clicked thoughtfully. "Could. This. Be. A. Threat. To. Nazarick?"
+                </p>
+
+                <p>
+                    "That remains to be determined," Ainz replied, his skeletal hand gripping the staff of Ainz Ooal Gown. "Which is why we must investigate personally. I will lead this expedition, accompanied by Aura, Mare, and Shalltear. The rest of you will maintain vigilance over Nazarick in our absence."
+                </p>
+
+                <p>
+                    "But Ainz-sama," Albedo protested, concern evident in her voice. "Allowing you to venture forth without maximum protection—"
+                </p>
+
+                <p>
+                    Ainz raised a hand, silencing her. "Your concern is noted, Albedo. However, this mission requires stealth and reconnaissance rather than overwhelming force. Besides," he added with a hint of amusement in his voice, "I am quite capable of protecting myself."
+                </p>
+                
+                <div class="text-center py-8 border-t border-dark-700 mt-8">
+                    <p class="text-dark-400 italic">End of Chapter 1</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Coin system locked chapter notice -->
+        <div class="bg-dark-800 rounded-lg p-6 mt-8 border border-dark-600">
+            <div class="flex items-start">
+                <div class="mr-4 text-yellow-400 text-2xl">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <div class="flex-1">
+                    <h4 class="font-semibold mb-1">Continue Reading with Early Access</h4>
+                    <p class="text-dark-300 mb-4">Chapter 2 is already available with early access. Unlock it now to continue reading!</p>
+                    <button class="btn-primary">
+                        <i class="fas fa-unlock mr-2"></i>
+                        Unlock Chapter 2 for 30 Coins
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter Navigation -->
+        <div class="flex justify-center space-x-4 my-8">
+            <a href="#" class="chapter-nav-btn prev-chapter-btn">
+                <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Previous Chapter
+            </a>
+            <a href="../series/show.html" class="btn-secondary">Back to Series</a>
+            <a href="#" class="chapter-nav-btn next-chapter-btn">
+                Next Chapter
+                <svg class="w-5 h-5 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="bg-dark-800 rounded-lg p-6 border border-dark-700 mt-8">
+            <h3 class="text-xl font-semibold mb-6">Chapter Discussion</h3>
+            
+            <!-- Comment Form -->
+            <div class="mb-6">
+                <textarea class="input-field w-full h-24 mb-4" placeholder="Share your thoughts on this chapter..."></textarea>
+                <button class="btn-primary">Post Comment</button>
+            </div>
+
+            <!-- Comments -->
+            <div class="space-y-4">
+                <div class="bg-dark-700 rounded-lg p-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-warning rounded-full flex items-center justify-center">
+                            <span class="text-white text-sm font-semibold">N</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="font-medium">novel_enthusiast</span>
+                                <span class="text-dark-400 text-sm">2 hours ago</span>
+                            </div>
+                            <p class="text-dark-200">Another excellent chapter! The way the author builds suspense is masterful. Can't wait to see what this ancient seal contains.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-dark-700 rounded-lg p-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-accent-500 rounded-full flex items-center justify-center">
+                            <span class="text-white text-sm font-semibold">O</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="font-medium">overlord_fan</span>
+                                <span class="text-dark-400 text-sm">3 hours ago</span>
+                            </div>
+                            <p class="text-dark-200">Ainz's internal monologue about his guildmates always hits me in the feels. Such great character development!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auto-scroll indicator (hidden by default) -->
+    <div id="autoScrollIndicator" class="auto-scroll-indicator hidden">
+        <i class="fas fa-play"></i>
+        <span>Auto-scrolling</span>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/utils.js"></script>
+    <script src="../js/readers.js"></script>
+    <script>
+        // Additional functionality not covered by readers.js
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle auto-scroll indicator
+            const autoScrollCheck = document.getElementById('autoScrollCheck');
+            const autoScrollIndicator = document.getElementById('autoScrollIndicator');
+            
+            if (autoScrollCheck && autoScrollIndicator) {
+                autoScrollCheck.addEventListener('change', function() {
+                    autoScrollIndicator.classList.toggle('hidden', !this.checked);
+                });
+            }
+            
+            // Add keyboard shortcuts for chapter navigation
+            document.addEventListener('keydown', function(e) {
+                // Page up/down for scrolling within chapter
+                if (e.key === 'PageUp') {
+                    window.scrollBy({
+                        top: -window.innerHeight * 0.9,
+                        behavior: 'smooth'
+                    });
+                } else if (e.key === 'PageDown') {
+                    window.scrollBy({
+                        top: window.innerHeight * 0.9,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Home/End for top/bottom of chapter
+                else if (e.key === 'Home') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else if (e.key === 'End') {
+                    window.scrollTo({
+                        top: document.body.scrollHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venomfank Readers - Home</title>
+    <link href="/src/output.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Header for logged-in users -->
+    <header class="main-header" id="main-header">
+        <nav class="bg-transparent">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center header-content">
+                    <div class="flex items-center space-x-8">
+                        <a href="index.html" class="text-2xl font-bold text-accent-500">
+                            <i class="fas fa-book-open mr-2"></i>Venomfank
+                        </a>
+                        <div class="hidden md:flex space-x-6">
+                            <a href="series/index.html" class="nav-link"><i class="fas fa-compass mr-1"></i> Browse</a>
+                            <a href="#" class="nav-link"><i class="fas fa-fire mr-1"></i> Popular</a>
+                            <a href="#" class="nav-link"><i class="fas fa-clock mr-1"></i> Latest</a>
+                            <a href="user/bookmarks.html" class="nav-link"><i class="fas fa-bookmark mr-1"></i> Bookmarks</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <input type="text" placeholder="Search series..." class="input-field w-64 pr-10">
+                            <svg class="absolute right-3 top-3.5 h-5 w-5 text-dark-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        
+                        <!-- Notifications -->
+                        <div class="relative">
+                            <button class="p-2 text-dark-300 hover:text-white transition-colors relative" id="notifications-button">
+                                <i class="fas fa-bell"></i>
+                                <span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-accent-500"></span>
+                            </button>
+                            <div class="absolute right-0 mt-2 w-80 bg-dark-800 rounded-lg shadow-lg py-2 hidden z-50" id="notifications-dropdown">
+                                <h3 class="px-4 py-2 font-semibold border-b border-dark-700">Notifications</h3>
+                                <div class="max-h-64 overflow-y-auto">
+                                    <a href="#" class="block px-4 py-3 hover:bg-dark-700 border-b border-dark-700">
+                                        <div class="flex items-start">
+                                            <div class="flex-shrink-0 bg-accent-500 rounded-full p-1 mr-3">
+                                                <i class="fas fa-bookmark text-white text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm">New chapter of <span class="font-medium">One Piece</span> is now available!</p>
+                                                <p class="text-xs text-dark-400 mt-1">2 hours ago</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="block px-4 py-3 hover:bg-dark-700 border-b border-dark-700">
+                                        <div class="flex items-start">
+                                            <div class="flex-shrink-0 bg-success rounded-full p-1 mr-3">
+                                                <i class="fas fa-coins text-white text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm">You received <span class="text-success font-medium">100 coins</span> from daily login!</p>
+                                                <p class="text-xs text-dark-400 mt-1">1 day ago</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="block px-4 py-3 hover:bg-dark-700">
+                                        <div class="flex items-start">
+                                            <div class="flex-shrink-0 bg-warning rounded-full p-1 mr-3">
+                                                <i class="fas fa-star text-white text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm">Series <span class="font-medium">Demon Slayer</span> has been completed!</p>
+                                                <p class="text-xs text-dark-400 mt-1">3 days ago</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="#" class="block text-center text-sm text-accent-500 hover:text-accent-400 py-2">View All Notifications</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Coins Display -->
+                        <div class="flex items-center space-x-1 bg-dark-800 rounded-full py-1 px-4 border border-dark-700">
+                            <i class="fas fa-coins text-yellow-400"></i>
+                            <span class="font-semibold">2,500</span>
+                        </div>
+                        
+                        <!-- User Profile Dropdown -->
+                        <div class="relative">
+                            <button class="flex items-center space-x-2" id="profile-button">
+                                <div class="w-9 h-9 rounded-full overflow-hidden border-2 border-accent-500">
+                                    <img src="https://i.pravatar.cc/150?img=35" alt="User Avatar" class="w-full h-full object-cover">
+                                </div>
+                                <span class="hidden md:inline-block text-sm font-medium">VenomUser</span>
+                                <i class="fas fa-chevron-down text-xs text-dark-400"></i>
+                            </button>
+                            <div class="absolute right-0 mt-2 w-48 bg-dark-800 rounded-lg shadow-lg py-2 hidden z-50" id="profile-dropdown">
+                                <a href="user/dashboard.html" class="block px-4 py-2 text-sm hover:bg-dark-700">
+                                    <i class="fas fa-user mr-2"></i>Dashboard
+                                </a>
+                                <a href="user/profile.html" class="block px-4 py-2 text-sm hover:bg-dark-700">
+                                    <i class="fas fa-cog mr-2"></i>Edit Profile
+                                </a>
+                                <a href="user/bookmarks.html" class="block px-4 py-2 text-sm hover:bg-dark-700">
+                                    <i class="fas fa-bookmark mr-2"></i>Bookmarks
+                                </a>
+                                <a href="user/history.html" class="block px-4 py-2 text-sm hover:bg-dark-700">
+                                    <i class="fas fa-history mr-2"></i>Reading History
+                                </a>
+                                <a href="user/purchases.html" class="block px-4 py-2 text-sm hover:bg-dark-700">
+                                    <i class="fas fa-shopping-cart mr-2"></i>Purchases
+                                </a>
+                                <div class="border-t border-dark-700 my-1"></div>
+                                <a href="#" class="block px-4 py-2 text-sm text-error hover:bg-dark-700">
+                                    <i class="fas fa-sign-out-alt mr-2"></i>Sign Out
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <button class="md:hidden p-2 rounded-md bg-dark-700 hover:bg-dark-600 transition-colors" id="mobile-menu-button">
+                            <i class="fas fa-bars text-dark-200"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div class="md:hidden hidden" id="mobile-menu">
+                    <div class="px-2 pt-2 pb-3 space-y-1 border-t border-dark-700 mt-2">
+                        <a href="series/index.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-compass mr-1"></i> Browse</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-fire mr-1"></i> Popular</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-clock mr-1"></i> Latest</a>
+                        <a href="user/bookmarks.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-bookmark mr-1"></i> Bookmarks</a>
+                        <a href="user/history.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-history mr-1"></i> Reading History</a>
+                        <a href="user/purchases.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-shopping-cart mr-1"></i> Purchases</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-error nav-link"><i class="fas fa-sign-out-alt mr-1"></i> Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Venomfank JS Modules -->
+    <script src="/js/utils.js"></script>
+    <script src="/js/navigation.js"></script>
+    <script src="/js/sliders.js"></script>
+    <script src="/js/filters.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/header-dropdown.js"></script>
+</body>
+</html>
