@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venomfank Readers - Checkout</title>
+    <link href="/src/output.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="main-header" id="main-header">
+        <nav class="bg-transparent">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center header-content">
+                    <div class="flex items-center space-x-8">
+                        <a href="../index.html" class="text-2xl font-bold text-accent-500">
+                            <i class="fas fa-book-open mr-2"></i>Venomfank
+                        </a>
+                        <div class="hidden md:flex space-x-6">
+                            <a href="../series/index.html" class="nav-link"><i class="fas fa-compass mr-1"></i> Browse</a>
+                            <a href="#" class="nav-link"><i class="fas fa-fire mr-1"></i> Popular</a>
+                            <a href="#" class="nav-link"><i class="fas fa-clock mr-1"></i> Latest</a>
+                            <a href="../price/index.html" class="nav-link font-semibold"><i class="fas fa-coins mr-1"></i> Pricing</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="hidden sm:flex items-center space-x-2">
+                            <span class="coin-badge">250</span>
+                        </div>
+                        <a href="../auth/login.html" class="nav-link hidden sm:inline-block"><i class="fas fa-sign-in-alt mr-1"></i> Login</a>
+                        <a href="../user/dashboard.html" class="btn-primary hidden sm:inline-block"><i class="fas fa-user mr-1"></i> Dashboard</a>
+                        <button class="md:hidden p-2 rounded-md bg-dark-700 hover:bg-dark-600 transition-colors" id="mobile-menu-button">
+                            <i class="fas fa-bars text-dark-200"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div class="md:hidden hidden" id="mobile-menu">
+                    <div class="px-2 pt-2 pb-3 space-y-1 border-t border-dark-700 mt-2">
+                        <a href="../series/index.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-compass mr-1"></i> Browse</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-fire mr-1"></i> Popular</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-clock mr-1"></i> Latest</a>
+                        <a href="../price/index.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-coins mr-1"></i> Pricing</a>
+                        <a href="../auth/login.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-sign-in-alt mr-1"></i> Login</a>
+                        <a href="../user/dashboard.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-user mr-1"></i> Dashboard</a>
+                        <div class="px-3 py-2 flex items-center">
+                            <span class="text-dark-300 mr-2">Coins:</span>
+                            <span class="coin-badge">250</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header Spacer -->
+    <div class="header-spacer"></div>
+
+    <!-- Hero Section -->
+    <section class="relative py-16">
+        <div class="hero-overlay"></div>
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden;">
+            <img src="https://picsum.photos/id/1058/1920/1080" alt="Checkout Background" class="w-full h-full object-cover filter blur-sm">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-4xl font-bold mb-6">
+                    Complete Your <span class="text-accent-500">Purchase</span>
+                </h1>
+                <p class="text-xl text-dark-200 mb-8 max-w-2xl mx-auto">
+                    Just one step away from unlocking premium content
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Page -->
+    <section class="py-12 -mt-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-dark-700 rounded-lg overflow-hidden shadow-xl" data-aos="fade-up">
+                <!-- Order Summary -->
+                <div class="p-6 border-b border-dark-600">
+                    <h2 class="text-2xl font-semibold mb-6">Order Summary</h2>
+                    
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-dark-600 rounded-lg flex items-center justify-center">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png" alt="Coin Package" class="w-10 h-10">
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg" id="package-name">Value Pack</h3>
+                                <div class="flex items-center mt-1">
+                                    <span class="text-dark-400 text-sm">Get </span>
+                                    <span class="text-lg font-bold text-accent-500 mx-1" id="coin-amount">250</span>
+                                    <span class="text-dark-400 text-sm">coins</span>
+                                    <span class="ml-2 bg-accent-500 text-white text-xs px-2 py-0.5 rounded">+20% bonus</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-2xl font-bold" id="package-price">$9.99</span>
+                    </div>
+                    
+                    <div class="bg-dark-800 rounded-lg p-4 mb-6">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <i class="fas fa-gift text-accent-500"></i>
+                            <h3 class="font-medium">Have a promo code?</h3>
+                        </div>
+                        <div class="flex space-x-2">
+                            <input type="text" id="promo" class="input-field flex-1" placeholder="Enter promo code">
+                            <button class="btn-secondary px-4">Apply</button>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 border-t border-dark-600 pt-4">
+                        <div class="flex justify-between">
+                            <span class="text-dark-300">Subtotal:</span>
+                            <span class="font-medium" id="subtotal">$9.99</span>
+                        </div>
+                        <div class="flex justify-between" id="discount-container">
+                            <span class="text-dark-300">Discount:</span>
+                            <span class="font-medium text-green-400" id="discount">-$0.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-dark-300">Tax:</span>
+                            <span class="font-medium" id="tax">$0.00</span>
+                        </div>
+                        <div class="flex justify-between border-t border-dark-600 pt-3 mt-3">
+                            <span class="text-lg font-semibold">Total:</span>
+                            <span class="text-lg font-bold" id="total">$9.99</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Payment Options -->
+                <div class="p-6 bg-dark-800">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-semibold">Payment Method</h3>
+                        <div class="flex space-x-2">
+                            <img src="https://cdn.midtrans.com/assets/images/logo-midtrans-color.png" alt="Midtrans" class="h-6">
+                            <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa" class="h-6">
+                            <img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Mastercard" class="h-6">
+                            <img src="https://cdn-icons-png.flaticon.com/512/196/196565.png" alt="PayPal" class="h-6">
+                        </div>
+                    </div>
+                    
+                    <div class="bg-dark-700 p-4 rounded-lg mb-6 flex items-start space-x-3">
+                        <i class="fas fa-shield-alt text-accent-500 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium">Secure Payment</h4>
+                            <p class="text-sm text-dark-400">Your payment will be processed securely via Midtrans payment gateway.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-6">
+                        <div class="flex items-center h-5">
+                            <input id="terms" type="checkbox" required class="w-4 h-4 accent-accent-500">
+                        </div>
+                        <div class="ml-3">
+                            <label for="terms" class="text-sm">
+                                I agree to the <a href="#" class="text-accent-500 hover:text-accent-400">Terms of Service</a> and <a href="#" class="text-accent-500 hover:text-accent-400">Privacy Policy</a>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="pay-now-btn" class="btn-primary w-full py-4 text-center text-lg">
+                        <i class="fas fa-lock mr-2"></i>Pay Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Additional Info -->
+            <div class="mt-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-dark-300 mb-2">Need help? <a href="#" class="text-accent-500 hover:underline">Contact our support team</a></p>
+                <div class="flex justify-center space-x-6 mt-4">
+                    <a href="../price/index.html" class="text-dark-400 hover:text-dark-200 transition-colors">
+                        <i class="fas fa-arrow-left mr-1"></i> Back to Pricing
+                    </a>
+                    <a href="../index.html" class="text-dark-400 hover:text-dark-200 transition-colors">
+                        <i class="fas fa-home mr-1"></i> Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookie Consent -->
+    <div class="fixed bottom-4 left-4 right-4 md:left-auto md:max-w-md bg-dark-700 rounded-lg p-4 shadow-lg flex flex-col sm:flex-row items-center justify-between z-50 fade-in" id="cookie-banner">
+        <div class="flex-1 mr-4">
+            <p class="text-sm text-dark-300 mb-2 sm:mb-0">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+        </div>
+        <div class="flex space-x-2">
+            <button class="text-xs px-3 py-2 rounded bg-dark-600 text-dark-300 hover:bg-dark-500 transition-colors">Preferences</button>
+            <button class="text-xs px-3 py-2 rounded bg-accent-500 text-white hover:bg-accent-400 transition-colors" id="accept-cookies">Accept All</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Venomfank JS Modules -->
+    <script src="/js/utils.js"></script>
+    <script src="/js/navigation.js"></script>
+    <script src="/js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize animations
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+            
+            // Get package from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const package = urlParams.get('package') || 'value'; // Default to value pack
+            
+            // Package details
+            const packages = {
+                starter: {
+                    name: 'Starter Pack',
+                    coins: 100,
+                    price: 4.99,
+                    bonus: '0%'
+                },
+                value: {
+                    name: 'Value Pack',
+                    coins: 250,
+                    price: 9.99,
+                    bonus: '20%'
+                },
+                premium: {
+                    name: 'Premium Pack',
+                    coins: 700,
+                    price: 24.99,
+                    bonus: '40%'
+                }
+            };
+            
+            // Update package details
+            const selectedPackage = packages[package] || packages.value;
+            document.getElementById('package-name').textContent = selectedPackage.name;
+            document.getElementById('coin-amount').textContent = selectedPackage.coins;
+            document.getElementById('package-price').textContent = `$${selectedPackage.price.toFixed(2)}`;
+            document.getElementById('subtotal').textContent = `$${selectedPackage.price.toFixed(2)}`;
+            document.getElementById('total').textContent = `$${selectedPackage.price.toFixed(2)}`;
+            
+            // Handle Pay Now button
+            document.getElementById('pay-now-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (!document.getElementById('terms').checked) {
+                    alert('Please agree to the Terms of Service and Privacy Policy to continue.');
+                    return;
+                }
+                
+                // This is where you'd integrate the Midtrans snap.js
+                this.disabled = true;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processing...';
+                
+                // Placeholder for Midtrans integration
+                // window.snap.pay('MIDTRANS-TRANSACTION-TOKEN', {
+                //     onSuccess: function(result) {
+                //         window.location.href = 'checkout_success.html?package=' + package;
+                //     },
+                //     onPending: function(result) {
+                //         console.log('pending transaction', result);
+                //     },
+                //     onError: function(result) {
+                //         console.log('error', result);
+                //         document.getElementById('pay-now-btn').disabled = false;
+                //         document.getElementById('pay-now-btn').innerHTML = '<i class="fas fa-lock mr-2"></i>Pay Now';
+                //     }
+                // });
+                
+                // For demo purposes, redirect to success page after delay
+                setTimeout(() => {
+                    window.location.href = 'checkout_success.html?package=' + package;
+                }, 2000);
+            });
+        });
+    </script>
+    
+    <!-- Placeholder for Midtrans Snap.js -->
+    <!-- <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="YOUR-CLIENT-KEY"></script> -->
+</body>
+</html>

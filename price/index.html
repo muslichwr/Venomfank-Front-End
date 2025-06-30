@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venomfank Readers - Pricing</title>
+    <link href="/src/output.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="main-header" id="main-header">
+        <nav class="bg-transparent">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center header-content">
+                    <div class="flex items-center space-x-8">
+                        <a href="../index.html" class="text-2xl font-bold text-accent-500">
+                            <i class="fas fa-book-open mr-2"></i>Venomfank
+                        </a>
+                        <div class="hidden md:flex space-x-6">
+                            <a href="../series/index.html" class="nav-link"><i class="fas fa-compass mr-1"></i> Browse</a>
+                            <a href="#" class="nav-link"><i class="fas fa-fire mr-1"></i> Popular</a>
+                            <a href="#" class="nav-link"><i class="fas fa-clock mr-1"></i> Latest</a>
+                            <a href="../price/index.html" class="nav-link font-semibold"><i class="fas fa-coins mr-1"></i> Pricing</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <input type="text" placeholder="Search series..." class="input-field w-64 pr-10">
+                            <svg class="absolute right-3 top-3.5 h-5 w-5 text-dark-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="hidden sm:flex items-center space-x-2">
+                            <span class="coin-badge">250</span>
+                        </div>
+                        <a href="../auth/login.html" class="nav-link hidden sm:inline-block"><i class="fas fa-sign-in-alt mr-1"></i> Login</a>
+                        <a href="../user/dashboard.html" class="btn-primary hidden sm:inline-block"><i class="fas fa-user mr-1"></i> Dashboard</a>
+                        <button class="md:hidden p-2 rounded-md bg-dark-700 hover:bg-dark-600 transition-colors" id="mobile-menu-button">
+                            <i class="fas fa-bars text-dark-200"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div class="md:hidden hidden" id="mobile-menu">
+                    <div class="px-2 pt-2 pb-3 space-y-1 border-t border-dark-700 mt-2">
+                        <a href="../series/index.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-compass mr-1"></i> Browse</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-fire mr-1"></i> Popular</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-clock mr-1"></i> Latest</a>
+                        <a href="../price/index.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-coins mr-1"></i> Pricing</a>
+                        <a href="../auth/login.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-sign-in-alt mr-1"></i> Login</a>
+                        <a href="../user/dashboard.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link"><i class="fas fa-user mr-1"></i> Dashboard</a>
+                        <div class="px-3 py-2 flex items-center">
+                            <span class="text-dark-300 mr-2">Coins:</span>
+                            <span class="coin-badge">250</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header Spacer -->
+    <div class="header-spacer"></div>
+
+    <!-- Hero Section -->
+    <section class="relative py-20">
+        <div class="hero-overlay"></div>
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden;">
+            <img src="https://picsum.photos/id/1073/1920/1080" alt="Pricing Background" class="w-full h-full object-cover filter blur-sm">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-5xl font-bold mb-6">
+                    Get More <span class="text-accent-500">Coins</span>
+                </h1>
+                <p class="text-xl text-dark-200 mb-8 max-w-2xl mx-auto">
+                    Unlock premium content and enjoy an ad-free reading experience with Venomfank Coins
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#pricing-plans" class="btn-primary text-lg px-8 py-4">
+                        <i class="fas fa-coins mr-2"></i>View Packages
+                    </a>
+                    <a href="#how-to-use" class="btn-secondary text-lg px-8 py-4">
+                        <i class="fas fa-info-circle mr-2"></i>How It Works
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section id="pricing-plans" class="py-16 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Choose Your Coin Package</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-dark-700 rounded-lg overflow-hidden transition-transform hover:transform hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="0">
+                    <div class="p-6 border-b border-dark-600">
+                        <h3 class="text-2xl font-semibold mb-2">Starter Pack</h3>
+                        <div class="flex items-center">
+                            <span class="text-4xl font-bold">$4.99</span>
+                        </div>
+                        <div class="flex items-center mt-4 space-x-2">
+                            <div class="flex items-center">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png" alt="Coin" class="w-6 h-6 mr-2">
+                                <span class="text-2xl font-bold text-accent-500">100</span>
+                            </div>
+                            <span class="text-dark-400">coins</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                <span>Access to 10 premium chapters</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                <span>Early access to new releases</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                <span>HD quality images</span>
+                            </li>
+                        </ul>
+                        <a href="checkout.html?package=starter" class="btn-secondary w-full text-center mt-6 block py-3">
+                            <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Popular Plan -->
+                <div class="bg-dark-700 rounded-lg overflow-hidden relative transition-transform hover:transform hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0">
+                        <div class="bg-accent-500 text-white px-4 py-1 rounded-bl-lg font-medium text-sm">
+                            POPULAR
+                        </div>
+                    </div>
+                    <div class="p-6 border-b border-dark-600">
+                        <h3 class="text-2xl font-semibold mb-2">Value Pack</h3>
+                        <div class="flex items-center">
+                            <span class="text-4xl font-bold">$9.99</span>
+                            <span class="text-dark-400 text-sm line-through ml-2">$12.49</span>
+                        </div>
+                        <div class="flex items-center mt-4 space-x-2">
+                            <div class="flex items-center">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png" alt="Coin" class="w-6 h-6 mr-2">
+                                <span class="text-2xl font-bold text-accent-500">250</span>
+                            </div>
+                            <span class="text-dark-400">coins</span>
+                            <span class="bg-accent-500 text-white text-xs px-2 py-1 rounded ml-2">+20% bonus</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                <span>Access to 30 premium chapters</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                <span>Early access to new releases</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                <span>HD quality images</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                <span>Ad-free reading experience</span>
+                            </li>
+                        </ul>
+                        <a href="checkout.html?package=value" class="btn-primary w-full text-center mt-6 block py-3">
+                            <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="bg-dark-700 rounded-lg overflow-hidden transition-transform hover:transform hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 right-0">
+                        <div class="bg-warning text-white px-4 py-1 rounded-bl-lg font-medium text-sm">
+                            BEST VALUE
+                        </div>
+                    </div>
+                    <div class="p-6 border-b border-dark-600">
+                        <h3 class="text-2xl font-semibold mb-2">Premium Pack</h3>
+                        <div class="flex items-center">
+                            <span class="text-4xl font-bold">$24.99</span>
+                            <span class="text-dark-400 text-sm line-through ml-2">$34.99</span>
+                        </div>
+                        <div class="flex items-center mt-4 space-x-2">
+                            <div class="flex items-center">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png" alt="Coin" class="w-6 h-6 mr-2">
+                                <span class="text-2xl font-bold text-accent-500">700</span>
+                            </div>
+                            <span class="text-dark-400">coins</span>
+                            <span class="bg-warning text-white text-xs px-2 py-1 rounded ml-2">+40% bonus</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                <span>Access to 90+ premium chapters</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                <span>Priority early access (24h)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                <span>HD quality images</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                <span>Ad-free reading experience</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                <span>Exclusive reader settings</span>
+                            </li>
+                        </ul>
+                        <a href="checkout.html?package=premium" class="btn-secondary w-full text-center mt-6 block py-3">
+                            <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coin Usage Info -->
+    <section id="how-to-use" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">How To Use Coins</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-dark-700 rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="0">
+                    <div class="inline-block p-3 rounded-full bg-dark-600 mb-4">
+                        <i class="fas fa-lock text-3xl text-accent-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Unlock Premium Content</h3>
+                    <p class="text-dark-300">Use coins to unlock premium chapters and exclusive series not available to free users.</p>
+                </div>
+                
+                <div class="bg-dark-700 rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="inline-block p-3 rounded-full bg-dark-600 mb-4">
+                        <i class="fas fa-clock text-3xl text-accent-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Early Access</h3>
+                    <p class="text-dark-300">Get early access to new chapter releases before they're available to everyone else.</p>
+                </div>
+                
+                <div class="bg-dark-700 rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="inline-block p-3 rounded-full bg-dark-600 mb-4">
+                        <i class="fas fa-ad text-3xl text-accent-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Ad-Free Experience</h3>
+                    <p class="text-dark-300">Enjoy an ad-free reading experience when you use coins to unlock premium features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">What Our Readers Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-dark-700 rounded-lg p-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://picsum.photos/id/1012/100/100" alt="User Avatar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Sarah K.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-dark-300">"The premium chapters are totally worth it! I love being able to read ahead of everyone else and the quality is amazing."</p>
+                </div>
+                
+                <div class="bg-dark-700 rounded-lg p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://picsum.photos/id/1025/100/100" alt="User Avatar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Michael T.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-dark-300">"The coin system is so convenient. I can unlock only the chapters I want to read and the ad-free experience makes reading so much better!"</p>
+                </div>
+                
+                <div class="bg-dark-700 rounded-lg p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://picsum.photos/id/1062/100/100" alt="User Avatar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Jessica L.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-dark-300">"The premium pack is the best value! I've been able to read all my favorite series without interruption. Totally recommend it!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-dark-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4" data-aos="fade-up">
+                <div class="bg-dark-700 rounded-lg">
+                    <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>How long do coins last?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-dark-300">
+                        <p>Coins don't expire! Once you purchase coins, they remain in your account until you use them.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-dark-700 rounded-lg">
+                    <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>Can I transfer coins to another account?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-dark-300">
+                        <p>Currently, coins cannot be transferred between accounts. They are tied to the account that purchased them.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-dark-700 rounded-lg">
+                    <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>How do I get free coins?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-dark-300">
+                        <p>You can earn free coins by completing daily check-ins, participating in events, and referring friends to join Venomfank.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-dark-700 rounded-lg">
+                    <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-dark-300">
+                        <p>We accept credit/debit cards (Visa, Mastercard, American Express), PayPal, Google Pay, and Apple Pay.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-dark-700 rounded-lg">
+                    <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>Can I get a refund for unused coins?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-dark-300">
+                        <p>Unfortunately, we do not offer refunds for purchased coins. All coin purchases are final.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-dark-700 rounded-lg p-8 md:p-12" data-aos="fade-up">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to enhance your reading experience?</h2>
+                    <p class="text-xl text-dark-300 mb-8">Join thousands of readers who've unlocked premium content with Venomfank coins</p>
+                    <a href="checkout.html?package=value" class="btn-primary text-lg px-8 py-4 inline-block">
+                        <i class="fas fa-shopping-cart mr-2"></i>Buy Coins Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Cookie Consent -->
+    <div class="fixed bottom-4 left-4 right-4 md:left-auto md:max-w-md bg-dark-700 rounded-lg p-4 shadow-lg flex flex-col sm:flex-row items-center justify-between z-50 fade-in" id="cookie-banner">
+        <div class="flex-1 mr-4">
+            <p class="text-sm text-dark-300 mb-2 sm:mb-0">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+        </div>
+        <div class="flex space-x-2">
+            <button class="text-xs px-3 py-2 rounded bg-dark-600 text-dark-300 hover:bg-dark-500 transition-colors">Preferences</button>
+            <button class="text-xs px-3 py-2 rounded bg-accent-500 text-white hover:bg-accent-400 transition-colors" id="accept-cookies">Accept All</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Venomfank JS Modules -->
+    <script src="/js/utils.js"></script>
+    <script src="/js/navigation.js"></script>
+    <script src="/js/sliders.js"></script>
+    <script src="/js/filters.js"></script>
+    <script src="/js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS animation
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+            
+            // FAQ toggle function
+            window.toggleFaq = function(el) {
+                const content = el.nextElementSibling;
+                const icon = el.querySelector('i');
+                
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.classList.add('transform', 'rotate-180');
+                } else {
+                    content.classList.add('hidden');
+                    icon.classList.remove('transform', 'rotate-180');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
