@@ -67,24 +67,6 @@
     <!-- Header Spacer -->
     <div class="header-spacer"></div>
 
-    <!-- Hero Section -->
-    <section class="relative py-16">
-        <div class="hero-overlay"></div>
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden;">
-            <img src="https://picsum.photos/id/1058/1920/1080" alt="Checkout Background" class="w-full h-full object-cover filter blur-sm">
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center" data-aos="fade-up">
-                <h1 class="text-4xl font-bold mb-6">
-                    Complete Your <span class="text-accent-500">Purchase</span>
-                </h1>
-                <p class="text-xl text-dark-200 mb-8 max-w-2xl mx-auto">
-                    Just one step away from unlocking premium content
-                </p>
-            </div>
-        </div>
-    </section>
-
     <!-- Checkout Page -->
     <section class="py-12 -mt-8">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,17 +91,6 @@
                             </div>
                         </div>
                         <span class="text-2xl font-bold" id="package-price">$9.99</span>
-                    </div>
-                    
-                    <div class="bg-dark-800 rounded-lg p-4 mb-6">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <i class="fas fa-gift text-accent-500"></i>
-                            <h3 class="font-medium">Have a promo code?</h3>
-                        </div>
-                        <div class="flex space-x-2">
-                            <input type="text" id="promo" class="input-field flex-1" placeholder="Enter promo code">
-                            <button class="btn-secondary px-4">Apply</button>
-                        </div>
                     </div>
                     
                     <div class="space-y-3 border-t border-dark-600 pt-4">
@@ -159,17 +130,6 @@
                         <div>
                             <h4 class="font-medium">Secure Payment</h4>
                             <p class="text-sm text-dark-400">Your payment will be processed securely via Midtrans payment gateway.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start mb-6">
-                        <div class="flex items-center h-5">
-                            <input id="terms" type="checkbox" required class="w-4 h-4 accent-accent-500">
-                        </div>
-                        <div class="ml-3">
-                            <label for="terms" class="text-sm">
-                                I agree to the <a href="#" class="text-accent-500 hover:text-accent-400">Terms of Service</a> and <a href="#" class="text-accent-500 hover:text-accent-400">Privacy Policy</a>
-                            </label>
                         </div>
                     </div>
                     
@@ -220,74 +180,6 @@
             AOS.init({
                 duration: 800,
                 once: true
-            });
-            
-            // Get package from URL parameters
-            const urlParams = new URLSearchParams(window.location.search);
-            const package = urlParams.get('package') || 'value'; // Default to value pack
-            
-            // Package details
-            const packages = {
-                starter: {
-                    name: 'Starter Pack',
-                    coins: 100,
-                    price: 4.99,
-                    bonus: '0%'
-                },
-                value: {
-                    name: 'Value Pack',
-                    coins: 250,
-                    price: 9.99,
-                    bonus: '20%'
-                },
-                premium: {
-                    name: 'Premium Pack',
-                    coins: 700,
-                    price: 24.99,
-                    bonus: '40%'
-                }
-            };
-            
-            // Update package details
-            const selectedPackage = packages[package] || packages.value;
-            document.getElementById('package-name').textContent = selectedPackage.name;
-            document.getElementById('coin-amount').textContent = selectedPackage.coins;
-            document.getElementById('package-price').textContent = `$${selectedPackage.price.toFixed(2)}`;
-            document.getElementById('subtotal').textContent = `$${selectedPackage.price.toFixed(2)}`;
-            document.getElementById('total').textContent = `$${selectedPackage.price.toFixed(2)}`;
-            
-            // Handle Pay Now button
-            document.getElementById('pay-now-btn').addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                if (!document.getElementById('terms').checked) {
-                    alert('Please agree to the Terms of Service and Privacy Policy to continue.');
-                    return;
-                }
-                
-                // This is where you'd integrate the Midtrans snap.js
-                this.disabled = true;
-                this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processing...';
-                
-                // Placeholder for Midtrans integration
-                // window.snap.pay('MIDTRANS-TRANSACTION-TOKEN', {
-                //     onSuccess: function(result) {
-                //         window.location.href = 'checkout_success.html?package=' + package;
-                //     },
-                //     onPending: function(result) {
-                //         console.log('pending transaction', result);
-                //     },
-                //     onError: function(result) {
-                //         console.log('error', result);
-                //         document.getElementById('pay-now-btn').disabled = false;
-                //         document.getElementById('pay-now-btn').innerHTML = '<i class="fas fa-lock mr-2"></i>Pay Now';
-                //     }
-                // });
-                
-                // For demo purposes, redirect to success page after delay
-                setTimeout(() => {
-                    window.location.href = 'checkout_success.html?package=' + package;
-                }, 2000);
             });
         });
     </script>

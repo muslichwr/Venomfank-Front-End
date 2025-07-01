@@ -69,24 +69,6 @@
     <!-- Header Spacer -->
     <div class="header-spacer"></div>
 
-    <!-- Success Hero Section -->
-    <section class="relative py-16">
-        <div class="hero-overlay"></div>
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden;">
-            <img src="https://picsum.photos/id/1068/1920/1080" alt="Success Background" class="w-full h-full object-cover filter blur-sm">
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center" data-aos="fade-up">
-                <h1 class="text-4xl font-bold mb-6">
-                    Payment <span class="text-accent-500">Successful!</span>
-                </h1>
-                <p class="text-xl text-dark-200 mb-8 max-w-2xl mx-auto">
-                    Thank you for your purchase. Your coins have been added to your account.
-                </p>
-            </div>
-        </div>
-    </section>
-
     <!-- Success Content -->
     <section class="py-12 -mt-8">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -159,84 +141,6 @@
                 </div>
             </div>
             
-            <!-- Recommended Series -->
-            <div class="mt-12" data-aos="fade-up" data-aos-delay="200">
-                <h2 class="text-2xl font-bold mb-6">Recommended Series for You</h2>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Series 1 -->
-                    <div class="bg-dark-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                        <a href="../series/detail.html" class="block relative">
-                            <img src="https://picsum.photos/id/1011/600/400" alt="Series Cover" class="w-full h-48 object-cover">
-                            <div class="absolute top-2 right-2 bg-accent-500 text-white text-xs px-2 py-1 rounded">Popular</div>
-                        </a>
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-1">
-                                <a href="../series/detail.html" class="hover:text-accent-500 transition-colors">The Dragon's Legacy</a>
-                            </h3>
-                            <p class="text-dark-300 text-sm mb-3 line-clamp-2">An epic fantasy tale of dragons, magic and ancient prophecies that will keep you on the edge of your seat.</p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center">
-                                    <img src="https://picsum.photos/id/1005/32/32" alt="Author" class="w-6 h-6 rounded-full mr-2">
-                                    <span class="text-xs text-dark-400">Sarah Johnson</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-star text-yellow-500 mr-1 text-xs"></i>
-                                    <span class="text-xs">4.8</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Series 2 -->
-                    <div class="bg-dark-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                        <a href="../series/detail.html" class="block relative">
-                            <img src="https://picsum.photos/id/1035/600/400" alt="Series Cover" class="w-full h-48 object-cover">
-                            <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">New</div>
-                        </a>
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-1">
-                                <a href="../series/detail.html" class="hover:text-accent-500 transition-colors">Midnight Chronicles</a>
-                            </h3>
-                            <p class="text-dark-300 text-sm mb-3 line-clamp-2">A supernatural thriller that follows a detective with unusual abilities solving mysterious cases in a city full of secrets.</p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center">
-                                    <img src="https://picsum.photos/id/1012/32/32" alt="Author" class="w-6 h-6 rounded-full mr-2">
-                                    <span class="text-xs text-dark-400">Michael Chen</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-star text-yellow-500 mr-1 text-xs"></i>
-                                    <span class="text-xs">4.6</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Series 3 -->
-                    <div class="bg-dark-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                        <a href="../series/detail.html" class="block relative">
-                            <img src="https://picsum.photos/id/1025/600/400" alt="Series Cover" class="w-full h-48 object-cover">
-                            <div class="absolute top-2 right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded">Featured</div>
-                        </a>
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-1">
-                                <a href="../series/detail.html" class="hover:text-accent-500 transition-colors">Echoes of Eternity</a>
-                            </h3>
-                            <p class="text-dark-300 text-sm mb-3 line-clamp-2">A sci-fi adventure across time and space where humanity's last hope lies in the hands of an unlikely hero.</p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center">
-                                    <img src="https://picsum.photos/id/1027/32/32" alt="Author" class="w-6 h-6 rounded-full mr-2">
-                                    <span class="text-xs text-dark-400">Alex Rivera</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-star text-yellow-500 mr-1 text-xs"></i>
-                                    <span class="text-xs">4.9</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             
             <!-- Additional Info -->
             <div class="mt-8 text-center" data-aos="fade-up" data-aos-delay="300">
@@ -279,66 +183,6 @@
             AOS.init({
                 duration: 800,
                 once: true
-            });
-            
-            // Get package from URL parameters
-            const urlParams = new URLSearchParams(window.location.search);
-            const package = urlParams.get('package') || 'value'; // Default to value pack
-            
-            // Package details
-            const packages = {
-                starter: {
-                    name: 'Starter Pack',
-                    coins: 100,
-                    price: 4.99,
-                    bonus: '0%'
-                },
-                value: {
-                    name: 'Value Pack',
-                    coins: 250,
-                    price: 9.99,
-                    bonus: '20%'
-                },
-                premium: {
-                    name: 'Premium Pack',
-                    coins: 700,
-                    price: 24.99,
-                    bonus: '40%'
-                }
-            };
-            
-            // Update transaction details
-            const selectedPackage = packages[package] || packages.value;
-            document.getElementById('package-name').textContent = selectedPackage.name;
-            document.getElementById('amount-paid').textContent = `$${selectedPackage.price.toFixed(2)}`;
-            document.getElementById('total-coins').textContent = selectedPackage.coins;
-            document.getElementById('user-coins').textContent = selectedPackage.coins;
-            
-            // Generate random order ID
-            const orderId = 'VFK-' + Math.floor(Math.random() * 10000000).toString().padStart(8, '0');
-            document.getElementById('order-id').textContent = orderId;
-            
-            // Set current date
-            const today = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            document.getElementById('payment-date').textContent = today.toLocaleDateString('en-US', options);
-            
-            // Randomly select payment method for demo
-            const paymentMethods = ['Credit Card', 'Debit Card', 'PayPal', 'Bank Transfer', 'E-wallet'];
-            const randomMethod = paymentMethods[Math.floor(Math.random() * paymentMethods.length)];
-            document.getElementById('payment-method').textContent = randomMethod;
-            
-            // Handle cookie consent
-            const cookieBanner = document.getElementById('cookie-banner');
-            const acceptCookies = document.getElementById('accept-cookies');
-            
-            if (localStorage.getItem('cookiesAccepted') === 'true') {
-                cookieBanner.style.display = 'none';
-            }
-            
-            acceptCookies.addEventListener('click', function() {
-                localStorage.setItem('cookiesAccepted', 'true');
-                cookieBanner.style.display = 'none';
             });
         });
     </script>

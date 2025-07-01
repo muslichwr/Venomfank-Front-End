@@ -73,31 +73,6 @@
     <!-- Header Spacer -->
     <div class="header-spacer"></div>
 
-    <!-- Hero Section -->
-    <section class="relative py-20">
-        <div class="hero-overlay"></div>
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden;">
-            <img src="https://picsum.photos/id/1073/1920/1080" alt="Pricing Background" class="w-full h-full object-cover filter blur-sm">
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center" data-aos="fade-up">
-                <h1 class="text-5xl font-bold mb-6">
-                    Get More <span class="text-accent-500">Coins</span>
-                </h1>
-                <p class="text-xl text-dark-200 mb-8 max-w-2xl mx-auto">
-                    Unlock premium content and enjoy an ad-free reading experience with Venomfank Coins
-                </p>
-                <div class="flex justify-center space-x-4">
-                    <a href="#pricing-plans" class="btn-primary text-lg px-8 py-4">
-                        <i class="fas fa-coins mr-2"></i>View Packages
-                    </a>
-                    <a href="#how-to-use" class="btn-secondary text-lg px-8 py-4">
-                        <i class="fas fa-info-circle mr-2"></i>How It Works
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Pricing Plans -->
     <section id="pricing-plans" class="py-16 bg-dark-800">
@@ -105,43 +80,38 @@
             <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Choose Your Coin Package</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Basic Plan -->
+                <!-- Paket Pemula -->
                 <div class="bg-dark-700 rounded-lg overflow-hidden transition-transform hover:transform hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="0">
                     <div class="p-6 border-b border-dark-600">
-                        <h3 class="text-2xl font-semibold mb-2">Starter Pack</h3>
+                        <h3 class="text-2xl font-semibold mb-2">Paket Pemula</h3>
                         <div class="flex items-center">
-                            <span class="text-4xl font-bold">$4.99</span>
+                            <span class="text-4xl font-bold">Rp 10.000</span>
                         </div>
                         <div class="flex items-center mt-4 space-x-2">
                             <div class="flex items-center">
                                 <img src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png" alt="Coin" class="w-6 h-6 mr-2">
-                                <span class="text-2xl font-bold text-accent-500">100</span>
+                                <span class="text-2xl font-bold text-accent-500">1.000</span>
                             </div>
                             <span class="text-dark-400">coins</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
-                                <span>Access to 10 premium chapters</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
-                                <span>Early access to new releases</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
-                                <span>HD quality images</span>
-                            </li>
-                        </ul>
-                        <a href="checkout.html?package=starter" class="btn-secondary w-full text-center mt-6 block py-3">
+                        <div class="min-h-[100px]">
+                            <p class="text-dark-300 mb-4">Cocok untuk mencoba fitur premium</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Akses ke chapter premium</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="checkout.html?package=pemula" class="btn-secondary w-full text-center mt-6 block py-3">
                             <i class="fas fa-shopping-cart mr-2"></i>Buy Now
                         </a>
                     </div>
                 </div>
 
-                <!-- Popular Plan -->
+                <!-- Paket Regular -->
                 <div class="bg-dark-700 rounded-lg overflow-hidden relative transition-transform hover:transform hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
                     <div class="absolute top-0 right-0">
                         <div class="bg-accent-500 text-white px-4 py-1 rounded-bl-lg font-medium text-sm">
@@ -149,91 +119,221 @@
                         </div>
                     </div>
                     <div class="p-6 border-b border-dark-600">
-                        <h3 class="text-2xl font-semibold mb-2">Value Pack</h3>
+                        <h3 class="text-2xl font-semibold mb-2">Paket Regular</h3>
                         <div class="flex items-center">
-                            <span class="text-4xl font-bold">$9.99</span>
-                            <span class="text-dark-400 text-sm line-through ml-2">$12.49</span>
+                            <span class="text-4xl font-bold">Rp 20.000</span>
+                            <span class="text-dark-400 text-sm line-through ml-2">Rp 25.000</span>
                         </div>
                         <div class="flex items-center mt-4 space-x-2">
                             <div class="flex items-center">
                                 <img src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png" alt="Coin" class="w-6 h-6 mr-2">
-                                <span class="text-2xl font-bold text-accent-500">250</span>
+                                <span class="text-2xl font-bold text-accent-500">2.500</span>
                             </div>
                             <span class="text-dark-400">coins</span>
-                            <span class="bg-accent-500 text-white text-xs px-2 py-1 rounded ml-2">+20% bonus</span>
+                            <span class="bg-accent-500 text-white text-xs px-2 py-1 rounded ml-2">+25% bonus</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
-                                <span>Access to 30 premium chapters</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
-                                <span>Early access to new releases</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
-                                <span>HD quality images</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
-                                <span>Ad-free reading experience</span>
-                            </li>
-                        </ul>
-                        <a href="checkout.html?package=value" class="btn-primary w-full text-center mt-6 block py-3">
+                        <div class="min-h-[100px]">
+                            <p class="text-dark-300 mb-4">Untuk pembaca casual, Bonus 500 coin (25% lebih banyak)</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Akses ke chapter premium</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Early access ke rilis baru</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="checkout.html?package=regular" class="btn-primary w-full text-center mt-6 block py-3">
                             <i class="fas fa-shopping-cart mr-2"></i>Buy Now
                         </a>
                     </div>
                 </div>
 
-                <!-- Premium Plan -->
+                <!-- Paket Premium -->
                 <div class="bg-dark-700 rounded-lg overflow-hidden transition-transform hover:transform hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6 border-b border-dark-600">
+                        <h3 class="text-2xl font-semibold mb-2">Paket Premium</h3>
+                        <div class="flex items-center">
+                            <span class="text-4xl font-bold">Rp 45.000</span>
+                            <span class="text-dark-400 text-sm line-through ml-2">Rp 60.000</span>
+                        </div>
+                        <div class="flex items-center mt-4 space-x-2">
+                            <div class="flex items-center">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png" alt="Coin" class="w-6 h-6 mr-2">
+                                <span class="text-2xl font-bold text-accent-500">6.000</span>
+                            </div>
+                            <span class="text-dark-400">coins</span>
+                            <span class="bg-accent-500 text-white text-xs px-2 py-1 rounded ml-2">+33% bonus</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="min-h-[100px]">
+                            <p class="text-dark-300 mb-4">Untuk pengguna aktif, Bonus 1500 coin (33% lebih banyak)</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Akses ke chapter premium</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Early access ke rilis baru</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Pengalaman membaca bebas iklan</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="checkout.html?package=premium" class="btn-secondary w-full text-center mt-6 block py-3">
+                            <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paket Enthusiast -->
+                <div class="bg-dark-700 rounded-lg overflow-hidden transition-transform hover:transform hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
                     <div class="absolute top-0 right-0">
                         <div class="bg-warning text-white px-4 py-1 rounded-bl-lg font-medium text-sm">
                             BEST VALUE
                         </div>
                     </div>
                     <div class="p-6 border-b border-dark-600">
-                        <h3 class="text-2xl font-semibold mb-2">Premium Pack</h3>
+                        <h3 class="text-2xl font-semibold mb-2">Paket Enthusiast</h3>
                         <div class="flex items-center">
-                            <span class="text-4xl font-bold">$24.99</span>
-                            <span class="text-dark-400 text-sm line-through ml-2">$34.99</span>
+                            <span class="text-4xl font-bold">Rp 100.000</span>
+                            <span class="text-dark-400 text-sm line-through ml-2">Rp 150.000</span>
                         </div>
                         <div class="flex items-center mt-4 space-x-2">
                             <div class="flex items-center">
                                 <img src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png" alt="Coin" class="w-6 h-6 mr-2">
-                                <span class="text-2xl font-bold text-accent-500">700</span>
+                                <span class="text-2xl font-bold text-accent-500">15.000</span>
                             </div>
                             <span class="text-dark-400">coins</span>
-                            <span class="bg-warning text-white text-xs px-2 py-1 rounded ml-2">+40% bonus</span>
+                            <span class="bg-warning text-white text-xs px-2 py-1 rounded ml-2">+50% bonus</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
-                                <span>Access to 90+ premium chapters</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
-                                <span>Priority early access (24h)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
-                                <span>HD quality images</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
-                                <span>Ad-free reading experience</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
-                                <span>Exclusive reader settings</span>
-                            </li>
-                        </ul>
-                        <a href="checkout.html?package=premium" class="btn-secondary w-full text-center mt-6 block py-3">
+                        <div class="min-h-[100px]">
+                            <p class="text-dark-300 mb-4">Untuk pecandu komik sejati, Bonus 5000 coin (50% lebih banyak)</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Akses ke semua chapter premium</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Priority early access (24h)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Pengalaman membaca bebas iklan</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="checkout.html?package=enthusiast" class="btn-primary w-full text-center mt-6 block py-3">
+                            <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paket Collector -->
+                <div class="bg-dark-700 rounded-lg overflow-hidden transition-transform hover:transform hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="p-6 border-b border-dark-600">
+                        <h3 class="text-2xl font-semibold mb-2">Paket Collector</h3>
+                        <div class="flex items-center">
+                            <span class="text-4xl font-bold">Rp 200.000</span>
+                            <span class="text-dark-400 text-sm line-through ml-2">Rp 350.000</span>
+                        </div>
+                        <div class="flex items-center mt-4 space-x-2">
+                            <div class="flex items-center">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png" alt="Coin" class="w-6 h-6 mr-2">
+                                <span class="text-2xl font-bold text-accent-500">35.000</span>
+                            </div>
+                            <span class="text-dark-400">coins</span>
+                            <span class="bg-success text-white text-xs px-2 py-1 rounded ml-2">+75% bonus</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="min-h-[100px]">
+                            <p class="text-dark-300 mb-4">Untuk kolektor chapter langka, Bonus 15000 coin (75% lebih banyak)</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Akses ke semua chapter premium</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Priority early access (48h)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Pengalaman membaca bebas iklan</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Akses ke chapter eksklusif</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="checkout.html?package=collector" class="btn-secondary w-full text-center mt-6 block py-3">
+                            <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paket VIP -->
+                <div class="bg-dark-700 rounded-lg overflow-hidden transition-transform hover:transform hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="500">
+                    <div class="absolute top-0 right-0">
+                        <div class="bg-success text-white px-4 py-1 rounded-bl-lg font-medium text-sm">
+                            PREMIUM VIP
+                        </div>
+                    </div>
+                    <div class="p-6 border-b border-dark-600">
+                        <h3 class="text-2xl font-semibold mb-2">Paket VIP</h3>
+                        <div class="flex items-center">
+                            <span class="text-4xl font-bold">Rp 500.000</span>
+                            <span class="text-dark-400 text-sm line-through ml-2">Rp 1.000.000</span>
+                        </div>
+                        <div class="flex items-center mt-4 space-x-2">
+                            <div class="flex items-center">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png" alt="Coin" class="w-6 h-6 mr-2">
+                                <span class="text-2xl font-bold text-accent-500">100.000</span>
+                            </div>
+                            <span class="text-dark-400">coins</span>
+                            <span class="bg-success text-white text-xs px-2 py-1 rounded ml-2">+100% bonus</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="min-h-[100px]">
+                            <p class="text-dark-300 mb-4">Baca tanpa batas semua chapter, Bonus 50000 coin (100% lebih banyak)</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Akses unlimited ke semua konten</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Priority early access (72h)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Pengalaman membaca bebas iklan</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Akses ke chapter eksklusif</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-accent-500 mt-1 mr-2"></i>
+                                    <span>Badge VIP di profil</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="checkout.html?package=vip" class="btn-primary w-full text-center mt-6 block py-3">
                             <i class="fas fa-shopping-cart mr-2"></i>Buy Now
                         </a>
                     </div>
@@ -245,97 +345,31 @@
     <!-- Coin Usage Info -->
     <section id="how-to-use" class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">How To Use Coins</h2>
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Cara Menggunakan Koin</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-dark-700 rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="0">
                     <div class="inline-block p-3 rounded-full bg-dark-600 mb-4">
                         <i class="fas fa-lock text-3xl text-accent-500"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Unlock Premium Content</h3>
-                    <p class="text-dark-300">Use coins to unlock premium chapters and exclusive series not available to free users.</p>
+                    <h3 class="text-xl font-semibold mb-3">Buka Konten Premium</h3>
+                    <p class="text-dark-300">Gunakan koin untuk membuka chapter premium dan seri eksklusif yang tidak tersedia untuk pengguna gratis.</p>
                 </div>
                 
                 <div class="bg-dark-700 rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="inline-block p-3 rounded-full bg-dark-600 mb-4">
                         <i class="fas fa-clock text-3xl text-accent-500"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Early Access</h3>
-                    <p class="text-dark-300">Get early access to new chapter releases before they're available to everyone else.</p>
+                    <h3 class="text-xl font-semibold mb-3">Akses Lebih Awal</h3>
+                    <p class="text-dark-300">Dapatkan akses lebih awal ke rilis chapter baru sebelum tersedia untuk orang lain. VIP mendapatkan akses hingga 72 jam lebih awal!</p>
                 </div>
                 
                 <div class="bg-dark-700 rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="inline-block p-3 rounded-full bg-dark-600 mb-4">
                         <i class="fas fa-ad text-3xl text-accent-500"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Ad-Free Experience</h3>
-                    <p class="text-dark-300">Enjoy an ad-free reading experience when you use coins to unlock premium features.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-16 bg-dark-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">What Our Readers Say</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-dark-700 rounded-lg p-6" data-aos="fade-up" data-aos-delay="0">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://picsum.photos/id/1012/100/100" alt="User Avatar" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-semibold">Sarah K.</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-dark-300">"The premium chapters are totally worth it! I love being able to read ahead of everyone else and the quality is amazing."</p>
-                </div>
-                
-                <div class="bg-dark-700 rounded-lg p-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://picsum.photos/id/1025/100/100" alt="User Avatar" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-semibold">Michael T.</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-dark-300">"The coin system is so convenient. I can unlock only the chapters I want to read and the ad-free experience makes reading so much better!"</p>
-                </div>
-                
-                <div class="bg-dark-700 rounded-lg p-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://picsum.photos/id/1062/100/100" alt="User Avatar" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-semibold">Jessica L.</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-dark-300">"The premium pack is the best value! I've been able to read all my favorite series without interruption. Totally recommend it!"</p>
+                    <h3 class="text-xl font-semibold mb-3">Pengalaman Bebas Iklan</h3>
+                    <p class="text-dark-300">Nikmati pengalaman membaca tanpa iklan saat Anda menggunakan koin untuk membuka fitur premium.</p>
                 </div>
             </div>
         </div>
@@ -344,56 +378,66 @@
     <!-- FAQ Section -->
     <section class="py-16 bg-dark-800">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Frequently Asked Questions</h2>
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Pertanyaan yang Sering Diajukan</h2>
             
             <div class="space-y-4" data-aos="fade-up">
                 <div class="bg-dark-700 rounded-lg">
                     <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span>How long do coins last?</span>
+                        <span>Berapa lama koin bertahan?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="hidden px-6 pb-4 text-dark-300">
-                        <p>Coins don't expire! Once you purchase coins, they remain in your account until you use them.</p>
+                        <p>Koin tidak pernah kadaluarsa! Setelah Anda membeli koin, mereka akan tetap ada di akun Anda sampai Anda menggunakannya.</p>
                     </div>
                 </div>
                 
                 <div class="bg-dark-700 rounded-lg">
                     <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span>Can I transfer coins to another account?</span>
+                        <span>Bisakah saya mentransfer koin ke akun lain?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="hidden px-6 pb-4 text-dark-300">
-                        <p>Currently, coins cannot be transferred between accounts. They are tied to the account that purchased them.</p>
+                        <p>Saat ini, koin tidak dapat ditransfer antar akun. Koin terikat pada akun yang membelinya.</p>
                     </div>
                 </div>
                 
                 <div class="bg-dark-700 rounded-lg">
                     <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span>How do I get free coins?</span>
+                        <span>Bagaimana cara mendapatkan koin gratis?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="hidden px-6 pb-4 text-dark-300">
-                        <p>You can earn free coins by completing daily check-ins, participating in events, and referring friends to join Venomfank.</p>
+                        <p>Anda dapat memperoleh koin gratis dengan menyelesaikan check-in harian, berpartisipasi dalam event, dan mengajak teman untuk bergabung dengan Venomfank.</p>
                     </div>
                 </div>
                 
                 <div class="bg-dark-700 rounded-lg">
                     <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span>What payment methods do you accept?</span>
+                        <span>Metode pembayaran apa yang tersedia?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="hidden px-6 pb-4 text-dark-300">
-                        <p>We accept credit/debit cards (Visa, Mastercard, American Express), PayPal, Google Pay, and Apple Pay.</p>
+                        <p>Kami menerima kartu kredit/debit (Visa, Mastercard, American Express), PayPal, QRIS, GoPay, OVO, Dana, Virtual Account, dan transfer bank.</p>
                     </div>
                 </div>
                 
                 <div class="bg-dark-700 rounded-lg">
                     <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span>Can I get a refund for unused coins?</span>
+                        <span>Bisakah saya mendapatkan pengembalian dana untuk koin yang tidak terpakai?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="hidden px-6 pb-4 text-dark-300">
-                        <p>Unfortunately, we do not offer refunds for purchased coins. All coin purchases are final.</p>
+                        <p>Sayangnya, kami tidak menawarkan pengembalian dana untuk koin yang telah dibeli. Semua pembelian koin bersifat final.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-dark-700 rounded-lg">
+                    <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>Apakah ada diskon untuk pembelian koin dalam jumlah besar?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-dark-300">
+                        <p>Ya! Seperti yang bisa Anda lihat di atas, semakin besar paket yang Anda beli, semakin besar bonus koin yang Anda dapatkan. Paket VIP memberikan bonus 100% koin tambahan!</p>
                     </div>
                 </div>
             </div>
@@ -405,10 +449,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-dark-700 rounded-lg p-8 md:p-12" data-aos="fade-up">
                 <div class="text-center max-w-3xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to enhance your reading experience?</h2>
-                    <p class="text-xl text-dark-300 mb-8">Join thousands of readers who've unlocked premium content with Venomfank coins</p>
-                    <a href="checkout.html?package=value" class="btn-primary text-lg px-8 py-4 inline-block">
-                        <i class="fas fa-shopping-cart mr-2"></i>Buy Coins Now
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Siap meningkatkan pengalaman membaca Anda?</h2>
+                    <p class="text-xl text-dark-300 mb-8">Bergabunglah dengan ribuan pembaca yang telah membuka konten premium dengan koin Venomfank</p>
+                    <a href="checkout.html?package=regular" class="btn-primary text-lg px-8 py-4 inline-block">
+                        <i class="fas fa-shopping-cart mr-2"></i>Beli Koin Sekarang
                     </a>
                 </div>
             </div>
